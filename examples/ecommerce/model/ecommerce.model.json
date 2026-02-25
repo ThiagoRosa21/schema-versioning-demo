@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 2,
+  "appVersion": "1.1.0",
+  "project": {
+    "name": "Untitled Project",
+    "createdAt": "2026-02-25T00:43:58.791Z",
+    "updatedAt": "2026-02-25T00:48:16.334Z",
+    "targetDatabase": "postgresql"
+  },
+  "canvas": {
+    "zoom": 1,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "snapToGrid": true,
+    "gridSize": 20
+  },
+  "nodes": [
+    {
+      "id": "node-262f77b0-530a-4bbf-a65a-9015a23f611a",
+      "type": "table",
+      "position": {
+        "x": -380,
+        "y": 300
+      },
+      "data": {
+        "name": "salary_history",
+        "columns": [
+          {
+            "id": "5cbd7d5d-2e56-4d18-b723-841182117e85",
+            "name": "id",
+            "type": "SERIAL",
+            "nullable": false,
+            "isPrimaryKey": true,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "96a56b8a-5d7b-4c8d-8507-1d99485a6e62",
+            "name": "employee_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": true,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "2bc286e7-1376-4958-9905-ab22594931a5",
+            "name": "amount",
+            "type": "DECIMAL(15,2)",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "b33ac4ac-23e5-48c0-ae71-7a314c5214f2",
+            "name": "currency",
+            "type": "VARCHAR(3)",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "a35e7821-84b4-42ec-bdec-fb5e31a7154b",
+            "name": "effective_date",
+            "type": "DATE",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "98bf9d4f-4cea-4a3d-b366-187f0eadc507",
+            "name": "end_date",
+            "type": "DATE",
+            "nullable": true,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "39adc451-8172-4f8a-9c00-dff5c1a8c411",
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "d63d2e29-7044-4bf9-a42d-d1181c06844b",
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    },
+    {
+      "id": "node-3c0c9664-7137-4543-aae1-9845c3cd2e2d",
+      "type": "table",
+      "position": {
+        "x": 20,
+        "y": 460
+      },
+      "data": {
+        "name": "employee_team_assignments",
+        "columns": [
+          {
+            "id": "ede94109-b2a7-4a0d-9a5a-770b9540bd95",
+            "name": "id",
+            "type": "SERIAL",
+            "nullable": false,
+            "isPrimaryKey": true,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "f662b908-bbb1-42b8-b5a9-276e86e8d999",
+            "name": "employee_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": true,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "8a7c1f43-0340-4f4d-8a42-fc0d95b8ef28",
+            "name": "team_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": true,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "3341309c-d13a-4a01-8868-281e044c3253",
+            "name": "start_date",
+            "type": "DATE",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "d60f6a7f-3233-43e9-9b78-0b65e437d67e",
+            "name": "end_date",
+            "type": "DATE",
+            "nullable": true,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "f923447e-d1f3-4a31-8e4b-b82bc6f43f81",
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "f7c389c7-8c7c-49dd-93aa-9293b3603a74",
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    },
+    {
+      "id": "node-ba497489-82ce-4ad8-8be5-7b2e983587d2",
+      "type": "table",
+      "position": {
+        "x": 400,
+        "y": 50
+      },
+      "data": {
+        "name": "teams",
+        "columns": [
+          {
+            "id": "b45503ca-1af8-4ff9-b0b8-c5382187b635",
+            "name": "id",
+            "type": "SERIAL",
+            "nullable": false,
+            "isPrimaryKey": true,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "1ebf0aeb-3ddc-477a-9558-3257c043f502",
+            "name": "name",
+            "type": "VARCHAR(100)",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": true,
+            "isIndex": false
+          },
+          {
+            "id": "2c0f597b-bc59-4b46-ace5-c16432d95dbb",
+            "name": "description",
+            "type": "TEXT",
+            "nullable": true,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "4a48f06e-4952-44e2-8d32-74e189204581",
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "443fb922-fa7b-4e9a-87f3-242dcd1eef77",
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    },
+    {
+      "id": "node-d6687a07-aacc-47f3-8cf3-f8c84fe230dc",
+      "type": "table",
+      "position": {
+        "x": 50,
+        "y": 50
+      },
+      "data": {
+        "name": "employees",
+        "columns": [
+          {
+            "id": "1189581a-80e0-4bcd-9dcd-2800f3dfa664",
+            "name": "id",
+            "type": "SERIAL",
+            "nullable": false,
+            "isPrimaryKey": true,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "a406dced-0eab-4428-9a2c-3352c42495d2",
+            "name": "first_name",
+            "type": "VARCHAR(100)",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "e5b68f22-e70a-4ed4-ba97-b20a72f8afed",
+            "name": "last_name",
+            "type": "VARCHAR(100)",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "07936858-cf50-4d62-b8a3-8cb394d48f5d",
+            "name": "email",
+            "type": "VARCHAR(255)",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": true,
+            "isIndex": false
+          },
+          {
+            "id": "030c4812-cbb4-48ef-8717-9ddbc4bab136",
+            "name": "is_active",
+            "type": "BOOLEAN",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false
+          },
+          {
+            "id": "28f52239-4899-456a-badb-64e817747808",
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "aed4e1ae-e769-4a74-9c90-8b41592a009c",
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "nullable": false,
+            "isPrimaryKey": false,
+            "isForeignKey": false,
+            "isUnique": false,
+            "isIndex": false,
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-44766708-381a-4ec8-8a1d-a42e8102d768",
+      "source": "node-3c0c9664-7137-4543-aae1-9845c3cd2e2d",
+      "sourceHandle": "col-8a7c1f43-0340-4f4d-8a42-fc0d95b8ef28-source",
+      "target": "node-ba497489-82ce-4ad8-8be5-7b2e983587d2",
+      "targetHandle": "col-b45503ca-1af8-4ff9-b0b8-c5382187b635-target",
+      "type": "smoothstep",
+      "data": {
+        "relationshipType": "1:N",
+        "sourceTableId": "node-3c0c9664-7137-4543-aae1-9845c3cd2e2d",
+        "sourceColumnId": "8a7c1f43-0340-4f4d-8a42-fc0d95b8ef28",
+        "sourceTableName": "employee_team_assignments",
+        "sourceColumnName": "team_id",
+        "targetTableId": "node-ba497489-82ce-4ad8-8be5-7b2e983587d2",
+        "targetColumnId": "b45503ca-1af8-4ff9-b0b8-c5382187b635",
+        "targetTableName": "teams",
+        "targetColumnName": "id",
+        "constraintName": "fk_employee_team_assignments_team_id",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE",
+        "enforceFkUnique": false,
+        "enforceFkNotNull": true,
+        "createdAt": "2026-02-25T00:44:49.154Z"
+      }
+    },
+    {
+      "id": "e-6e3194c9-c82c-4b2d-b156-1fa57114aec7",
+      "source": "node-3c0c9664-7137-4543-aae1-9845c3cd2e2d",
+      "sourceHandle": "col-f662b908-bbb1-42b8-b5a9-276e86e8d999-source",
+      "target": "node-d6687a07-aacc-47f3-8cf3-f8c84fe230dc",
+      "targetHandle": "col-1189581a-80e0-4bcd-9dcd-2800f3dfa664-target",
+      "type": "smoothstep",
+      "data": {
+        "relationshipType": "1:N",
+        "sourceTableId": "node-3c0c9664-7137-4543-aae1-9845c3cd2e2d",
+        "sourceColumnId": "f662b908-bbb1-42b8-b5a9-276e86e8d999",
+        "sourceTableName": "employee_team_assignments",
+        "sourceColumnName": "employee_id",
+        "targetTableId": "node-d6687a07-aacc-47f3-8cf3-f8c84fe230dc",
+        "targetColumnId": "1189581a-80e0-4bcd-9dcd-2800f3dfa664",
+        "targetTableName": "employees",
+        "targetColumnName": "id",
+        "constraintName": "fk_employee_team_assignments_employee_id",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE",
+        "enforceFkUnique": false,
+        "enforceFkNotNull": true,
+        "createdAt": "2026-02-25T00:44:49.154Z"
+      }
+    },
+    {
+      "id": "e-f04cadfc-581a-450e-a8f2-720d798b63e6",
+      "source": "node-262f77b0-530a-4bbf-a65a-9015a23f611a",
+      "sourceHandle": "col-96a56b8a-5d7b-4c8d-8507-1d99485a6e62-source",
+      "target": "node-d6687a07-aacc-47f3-8cf3-f8c84fe230dc",
+      "targetHandle": "col-1189581a-80e0-4bcd-9dcd-2800f3dfa664-target",
+      "type": "smoothstep",
+      "data": {
+        "relationshipType": "1:N",
+        "sourceTableId": "node-262f77b0-530a-4bbf-a65a-9015a23f611a",
+        "sourceColumnId": "96a56b8a-5d7b-4c8d-8507-1d99485a6e62",
+        "sourceTableName": "salary_history",
+        "sourceColumnName": "employee_id",
+        "targetTableId": "node-d6687a07-aacc-47f3-8cf3-f8c84fe230dc",
+        "targetColumnId": "1189581a-80e0-4bcd-9dcd-2800f3dfa664",
+        "targetTableName": "employees",
+        "targetColumnName": "id",
+        "constraintName": "fk_salary_history_employee_id",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE",
+        "enforceFkUnique": false,
+        "enforceFkNotNull": true,
+        "createdAt": "2026-02-25T00:44:49.154Z"
+      }
+    }
+  ],
+  "validation": {
+    "errors": [],
+    "warnings": []
+  }
+}
