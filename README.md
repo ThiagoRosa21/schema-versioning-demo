@@ -1,7 +1,9 @@
 
 # Schema Versioning Demo
 
-A practical demonstration of database schema versioning where the diagram is the source of truth and SQL, Docker, and documentation are generated from it.
+A practical demonstration of database schema versioning where the **diagram is the source of truth** and SQL, Docker, and documentation are generated from it.
+
+This repository shows a workflow designed to avoid outdated database diagrams and broken documentation in real-world projects.
 
 ---
 
@@ -24,13 +26,23 @@ At some point, the ERD no longer represents production, and teams stop trusting 
 
 Instead of maintaining documentation manually, this repository demonstrates a workflow where:
 
-- A single model is the source of truth  
+- A single model defines the database structure  
 - SQL schemas are generated from that model  
 - Docker environments are created automatically  
-- Documentation and diagrams stay in sync  
-- Everything is versioned in GitHub  
+- Diagrams and documentation stay aligned  
+- Everything is versioned and reviewable in GitHub  
 
 No parallel artifacts. No stale documentation.
+
+---
+
+## Example schema
+
+Below is the diagram used in the `ecommerce` example:
+
+![Database diagram](examples/ecommerce/docs/diagram.png)
+
+This diagram represents the **source model** from which all other artifacts were generated.
 
 ---
 
@@ -43,11 +55,11 @@ examples/
 ├── model/      # Source model (ForgeSQL export)
 ├── sql/        # Generated SQL (DDL and seed)
 ├── docker/     # Docker Compose environment
-└── docs/       # Diagram image and design notes
+└── docs/       # Diagram image and design decisions
 
 ````
 
-Each example is designed to be runnable and easy to understand.
+Each example is runnable and designed to be easy to review.
 
 ---
 
@@ -68,13 +80,11 @@ Connection details:
 * Password: postgres
 * Database: app
 
-After startup, the schema and seed data will already be applied.
+After startup, the schema and seed data are automatically applied.
 
 ---
 
-## Example contents
-
-Inside each example folder:
+## What each folder contains
 
 * `model/`
   The original source model used to generate all artifacts.
@@ -86,7 +96,7 @@ Inside each example folder:
   Docker Compose setup and initialization scripts.
 
 * `docs/`
-  Diagram export and short documentation describing key decisions.
+  Diagram export and a `decisions.md` file describing key modeling choices.
 
 ---
 
@@ -95,7 +105,7 @@ Inside each example folder:
 This repository focuses on:
 
 * Keeping schemas and diagrams aligned with reality
-* Making database structure easy to review and reason about
+* Making database structures easy to review in pull requests
 * Treating the schema as a first-class, versioned artifact
 * Reducing technical debt caused by outdated documentation
 
